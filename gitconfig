@@ -1,0 +1,12 @@
+# Lives in ~/.gitconfig
+
+[user]
+	name = Robin Smith
+	email = robincsmith84@gmail.com
+[alias]
+	gconfig = config --global
+	ls = log --oneline
+	ll = log --oneline --decorate --all --graph
+	assume = update-index --assume-unchanged
+	unassume = update-index --no-assume-unchanged
+	assumed = "!git ls-files -v | grep ^h | cut -c 3-"
