@@ -21,8 +21,17 @@ alias ..='cd ..'
 alias path='echo -e ${PATH//:/\\n}'
 alias libpath='echo -e ${LD_LIBRARY_PATH//:/\\n}'
 
-alias du='du -kh'    # Makes a more readable output.
-alias df='df -kh'    # Add a 'T' for *nix to print file system type
+alias du='du -kh'      # Makes a more readable output.
+alias du1='du -h -d 1' # Max-depth 1
+alias df='df -kh'      # Add a 'T' for *nix to print file system type
+
+#--------------
+# Git shortcuts
+#--------------
+alias gs='git status'
+alias gl='git log'
+alias gls='git ls'   # Requires 'gitconfig' to be set up
+alias gll='git ll'   # Requires 'gitconfig' to be set up
 
 #----------------
 # The 'ls' family
