@@ -28,10 +28,39 @@ alias df='df -kh'      # Add a 'T' for *nix to print file system type
 #--------------
 # Git shortcuts
 #--------------
-alias gs='git status'
+alias ga='git add'
+alias gap='git add -p'
+alias gb='git branch'
+alias gba='git branch --all'
+alias gbd='git branch --delete'
+alias gbD='git branch --delete --force'
+alias gc='git commit'
+alias gca='git commit --amend --no-edit'
+alias gcm='git commit -m'
+alias gco='git checkout'
+alias gcoall='git checkout -- .'
+alias gcob='git checkout -b'
+alias gcom='git checkout master'
+alias gd='git diff'
 alias gl='git log'
-alias gls='git ls'   # Requires 'gitconfig' to be set up
-alias gll='git ll'   # Requires 'gitconfig' to be set up
+alias gll='git log --oneline --decorate --all --graph'
+alias gls='git log --oneline'
+alias gm='git merge --no-ff'
+alias gma='git merge --abort'
+alias gmc='git merge --continue'
+alias gp='git pull'
+alias gpro='git pull --rebase origin' # requires final argument, e.g. 'gpr master'
+alias gprune='echo "git fetch..." && git fetch && echo "git fetch --prune..." && echo "Branches deleted on remote:" && git fetch --prune 2>&1 | awk '\''/deleted/ {print $5}'\'' | awk -F \/ '\''{ if(NR > 1){printf(" \\\n")} {printf(" " $2)}} END {print ""}'\'''
+alias gri='git rebase --interactive'
+alias gs='git status'
+alias gss='git status --short'
+alias gst='git stash'
+alias gstp='git stash pop'
+alias gsts='git stash save'
+alias gurl='git remote get-url origin'
+alias gurlx='git remote get-url'
+
+function gsearch() { git log --all --grep="$1"; }
 
 #----------------
 # The 'ls' family
