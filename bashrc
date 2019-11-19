@@ -1,4 +1,5 @@
 # Lives in ~/.bashrc
+# Can also live in ~/.zshrc - add Liquidprompt setup from bash_profile too
 
 # More available at http://www.tldp.org/LDP/abs/html/sample-bashrc.html
 
@@ -36,14 +37,19 @@ alias gbd='git branch --delete'
 alias gbD='git branch --delete --force'
 alias gc='git commit'
 alias gca='git commit --amend --no-edit'
+alias gcln='git clean -d --dry-run'
+alias gclnf='git clean -d --force'
 alias gcm='git commit -m'
 alias gco='git checkout'
 alias gcoall='git checkout -- .'
 alias gcob='git checkout -b'
 alias gcom='git checkout master'
 alias gd='git diff'
+alias gds='git diff --staged'
 alias gl='git log'
 alias gll='git log --oneline --decorate --all --graph'
+alias glp='git log --patch'
+alias glr='git reflog'
 alias gls='git log --oneline'
 alias gm='git merge --no-ff'
 alias gma='git merge --abort'
@@ -55,6 +61,7 @@ alias gri='git rebase --interactive'
 alias gs='git status'
 alias gss='git status --short'
 alias gst='git stash'
+alias gstls='git stash list'
 alias gstp='git stash pop'
 alias gsts='git stash save'
 alias gurl='git remote get-url origin'
