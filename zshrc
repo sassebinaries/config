@@ -12,6 +12,11 @@ if [ -f ~/Applications/liquidprompt/liquidprompt ]; then
     [[ $- = *i* ]] && source ~/Applications/liquidprompt/liquidprompt
 fi
 
+#------------------------
+# Git Prompt/Autocomplete
+#------------------------
+autoload -Uz compinit && compinit
+
 setopt interactivecomments
 
 #----------------
@@ -21,12 +26,6 @@ bindkey "[D" backward-word
 bindkey "[C" forward-word
 bindkey "^[a" beginning-of-line
 bindkey "^[e" end-of-line
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/elma.blum/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/elma.blum/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/elma.blum/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/elma.blum/google-cloud-sdk/completion.zsh.inc'; fi
 
 #----------------------------------------------
 # Other settings should be imported from bashrc
@@ -128,6 +127,12 @@ alias rot13="tr '[a-zA-Z]' '[n-za-mN-ZA-M]'"
 #--------
 # Display
 #--------
-alias 1mon='displayplacer "id:6B5751C9-D34B-1E8E-F956-D7F80DE3171C res:1080x1920 hz:60 color_depth:4 scaling:off origin:(0,0) degree:90"'
-alias 2mon='displayplacer "id:449E274F-08E1-851D-159C-38C5784BEB2F res:1920x1080 hz:60 color_depth:4 scaling:off origin:(0,0) degree:0" "id:6B5751C9-D34B-1E8E-F956-D7F80DE3171C res:1080x1920 hz:60 color_depth:8 scaling:off origin:(1920,0) degree:90"'
-alias 3mon='displayplacer "id:449E274F-08E1-851D-159C-38C5784BEB2F res:1920x1080 hz:60 color_depth:8 scaling:off origin:(0,0) degree:0" "id:B7E0C94A-5399-1757-6E30-661906FDDF76 res:1680x1050 color_depth:4 scaling:on origin:(-1680,0) degree:0" "id:6B5751C9-D34B-1E8E-F956-D7F80DE3171C res:1080x1920 hz:60 color_depth:8 scaling:off origin:(1920,-59) degree:90"'
+alias 1mon='displayplacer "id:6B5751C9-D34B-1E8E-F956-D7F80DE3171C res:1080x1920 hz:60 color_depth:8 scaling:off origin:(0,0) degree:90"'
+alias 2mon='displayplacer "id:449E274F-08E1-851D-159C-38C5784BEB2F res:1920x1080 hz:60 color_depth:8 scaling:off origin:(0,0) degree:0" "id:6B5751C9-D34B-1E8E-F956-D7F80DE3171C res:1080x1920 hz:60 color_depth:8 scaling:off origin:(-1080,0) degree:90"'
+alias 3mon='displayplacer "id:449E274F-08E1-851D-159C-38C5784BEB2F res:1920x1080 hz:60 color_depth:8 scaling:off origin:(0,0) degree:0" "id:5EA42BA3-2313-C376-C9A8-AA0B3DC8496E res:1792x1120 hz:59 color_depth:4 scaling:on origin:(-1792,0) degree:0" "id:6B5751C9-D34B-1E8E-F956-D7F80DE3171C res:1080x1920 hz:60 color_depth:8 scaling:off origin:(1920,0) degree:90"'
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/elma.blum/workspace/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/elma.blum/workspace/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/elma.blum/workspace/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/elma.blum/workspace/google-cloud-sdk/completion.zsh.inc'; fi
